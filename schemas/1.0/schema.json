@@ -19,17 +19,22 @@
       "description": "Metadata about server in use.",
       "type": "object",
       "required": [
+        "baseUrl",
         "name",
         "software",
         "version"
       ],
       "properties": {
+        "baseUrl": {
+          "description": "Base URL of the server.",
+          "type": "string",
+        },
         "name": {
-          "description": "The name of the server.",
+          "description": "The display name of the server or service.",
           "type": "string"
         },
         "software": {
-          "description": "The canonical name of this server software.",
+          "description": "The name of the server software.",
           "type": "string"
         },
         "version": {
@@ -52,24 +57,10 @@
     },
     "protocols": {
       "description": "The protocols supported on this server.",
-      "type": "object",
-      "properties": {
-        "inbound": {
-          "description": "The protocols this server can receive traffic for.",
-          "type": "array",
-          "minItems": 0,
-          "items": {
-            "type": "string"
-          }
-        },
-        "outbound": {
-          "description": "The protocols this server can generate traffic for.",
-          "type": "array",
-          "minItems": 0,
-          "items": {
-            "type": "string"
-          }
-        }
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "string"
       }
     },
     "services": {
