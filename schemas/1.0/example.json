@@ -1,14 +1,12 @@
 {
   "version": "1.0",
   "server": {
+    "baseUrl": "https://example.com",
     "name": "Example diaspora* server",
     "software": "diaspora",
     "version": "0.5.0"
   },
-  "protocols": {
-    "inbound": ["diaspora"],
-    "outbound": ["diaspora"]
-  },
+  "protocols": ["diaspora", "zot"],
   "services": {
     "inbound": ["gnusocial"],
     "outbound": ["facebook", "twitter"]
