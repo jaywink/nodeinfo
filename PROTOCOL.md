@@ -12,13 +12,19 @@ The term "client" in this document refers to software wishing to retrieve metada
 
 The term "schema" refers to a schema definition provided in the schemas subdirectory.
 
-## Retrieval
+## Document location
 
-A server must provide the metadata document at the endpoint `/.well-known/x-nodeinfo2`.
+Where possible a server should provide a NodeInfo2 document at the endpoint `/.well-known/x-nodeinfo2`.
+
+For [ActivityPub](https://www.w3.org/TR/activitypub/) implementers, an URI to a NodeInfo2 document should be provided in the Actor object as property `nodeInfo2Url`.
+
+## Retrieval
 
 When accessing the metadata document, a client should set the Accept header to the `application/json` media type.
 
 A server must provide the data at least in this media type. A server should set a Content-Type of `application/json`.
+
+When accessing NodeInfo2 documents through an ActivityPub Actor, fetching client should not assume that each document will correspond to a different server. The key `server.baseUrl` should be compared against when collecting statistics of a server. If two NodeInfo2 documents fetched via two different Actor objects have the same `server.baseUrl`, any statistics should be treated as one instead of counting them together.
 
 ## Structure
 
@@ -26,74 +32,29 @@ Due to the versioning of NodeInfo2, which is no version change in forward change
 
 ## Data contents
 
-Known data element values. Using these will ensure interoperatibility between other nodes using NodeInfo2. Please provide additional items that are common in your implementation to these lists via PR's.
+Below are some example element values. Using these will ensure interoperatibility between other nodes using NodeInfo2. Please provide additional items that are common in your implementation to these lists via PR's.
 
-### `software.name`
+### `server.name`
 
 * `diaspora`
 * `friendica`
+* `gnusocial`
 * `hubzilla`
+* `mastodon`
+* `mediagoblin`
+* `nextcloud`
+* `pumpio`
 * `redmatrix`
 * `socialhome`
 * `social-relay`
 
-### `protocols.inbound.items`
+### `protocols`
 
-* `buddycloud`
+* `activitypub`
 * `diaspora`
-* `friendica`
-* `gnusocial`
+* `dfrn`
 * `libertree`
 * `mediagoblin`
+* `ostatus
 * `pumpio`
 * `zot`
-* `smtp`
-* `tent`
-
-### `protocols.outbound.items`
-
-* `buddycloud`
-* `diaspora`
-* `friendica`
-* `gnusocial`
-* `libertree`
-* `mediagoblin`
-* `pumpio`
-* `redmatrix`
-* `smtp`
-* `tent`
-
-### `services.inbound.items`
-
-* `appnet`
-* `gnusocial`
-* `pumpio`
-
-### `services.outbound.items`
-
-* `appnet`
-* `blogger`
-* `buddycloud`
-* `diaspora`
-* `dreamwidth`
-* `drupal`
-* `facebook`
-* `friendica`
-* `gnusocial`
-* `google`
-* `insanejournal`
-* `libertree`
-* `linkedin`
-* `livejournal`
-* `mediagoblin`
-* `myspace`
-* `pinterest`
-* `posterous`
-* `pumpio`
-* `redmatrix`
-* `smtp`
-* `tent`
-* `tumblr`
-* `twitter`
-* `wordpress`
-* `xmpp`
