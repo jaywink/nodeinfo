@@ -12,15 +12,18 @@ Current version is 1.0. Version upgrade shall happen only in backwards incompati
 
 ## Support
 
-No major support at this point. Plans for integration of this standard exist for the following server stacks:
+* [The Federation.info](https://the-federation.info) - A decentralized social web statistics site
 
-* [The Federation.info](https://the-federation.info)
+Plans for integration of this standard exist for the following server stacks:
+
 * [Social-Relay](https://github.com/jaywink/social-relay)
 * [Socialhome](https://github.com/jaywink/socialhome)
 
 Library support is planned for the following:
 
 * [Social-Federation](https://github.com/jaywink/social-federation) (Python)
+
+Have a server or library you have added support to? Send a PR!
 
 ## License
 
