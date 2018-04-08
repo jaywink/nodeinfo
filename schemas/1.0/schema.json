@@ -53,6 +53,10 @@
       "contact": {
         "description": "Contact information for the organization or person.",
         "type": "string"
+      },
+      "account": {
+        "description": "URL of admin or info account on this server.",
+        "type": "string"
       }
     },
     "protocols": {
@@ -111,6 +115,11 @@
               "description": "The amount of users that signed in at least once in the last 30 days.",
               "type": "integer",
               "minimum": 0
+            },
+            "activeWeek": {
+              "description": "The amount of users that signed in at least once in the last 7 days.",
+              "type": "integer",
+              "minimum": 0
             }
           }
         },
@@ -125,6 +134,14 @@
           "minimum": 0
         }
       }
+    },
+    "relay": {
+      "description": "State of relay integration, see https://github.com/jaywink/social-relay/blob/master/docs/relays.md",
+      "enum": [
+        "",
+        "all",
+        "tags"
+      ]
     },
     "otherFeatures": {
       "description": "Other features of the server.",
