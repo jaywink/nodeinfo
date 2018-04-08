@@ -26,13 +26,19 @@ A server must provide the data at least in this media type. A server should set 
 
 When accessing NodeInfo2 documents through an ActivityPub Actor, fetching client should not assume that each document will correspond to a different server. The key `server.baseUrl` should be compared against when collecting statistics of a server. If two NodeInfo2 documents fetched via two different Actor objects have the same `server.baseUrl`, any statistics should be treated as one instead of counting them together.
 
-## Structure
+### baseUrl validation
 
-Due to the versioning of NodeInfo2, which is no version change in forward changes, only major backwards incompatible changes, implementors should be prepared tho deal with situations where a key that has recently been added to the specification doesn't yet exist in all the NodeInfo2 documents created by servers implementing NodeInfo2.
+Consumers should not blindly trust `server.baseUrl` and should always verify it is under the host that was initially called. For example, if a document fetched at host `foobar.local` contains a `server.baseUrl` of `barfoo.local`, it should be rejected.
 
-## Data contents
+## Schema
 
-Below are some example element values. Using these will ensure interoperatibility between other nodes using NodeInfo2. Please provide additional items that are common in your implementation to these lists via PR's.
+The [schema](https://github.com/jaywink/nodeinfo2/blob/master/schemas/1.0/schema.json) lists required and documented known optional keys.
+
+Due to the versioning of NodeInfo2, which has no version change in forward changes, only major backwards incompatible changes, implementors should be prepared tho deal with situations where a key that has recently been added to the specification doesn't yet exist in all the NodeInfo2 documents created by servers implementing NodeInfo2.
+
+### Data values
+
+Below are some example key values. Using these will ensure interoperability between other nodes using NodeInfo2. Please provide additional items that are common in your implementation to these lists via PR's.
 
 ### `server.name`
 
@@ -47,6 +53,7 @@ Below are some example element values. Using these will ensure interoperatibilit
 * `redmatrix`
 * `socialhome`
 * `social-relay`
+* `ganggo`
 
 ### `protocols`
 
@@ -55,6 +62,6 @@ Below are some example element values. Using these will ensure interoperatibilit
 * `dfrn`
 * `libertree`
 * `mediagoblin`
-* `ostatus
+* `ostatus`
 * `pumpio`
 * `zot`

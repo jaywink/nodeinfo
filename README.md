@@ -12,16 +12,14 @@ Current version is 1.0. Version upgrade shall happen only in backwards incompati
 
 ## Support
 
-* [The Federation.info](https://the-federation.info) - A decentralized social web statistics site
+Implemented in the following platforms:
 
-Plans for integration of this standard exist for the following server stacks:
-
-* [Social-Relay](https://github.com/jaywink/social-relay)
+* [The Federation.info](https://the-federation.info)
 * [Socialhome](https://github.com/jaywink/socialhome)
 
-Library support is planned for the following:
+Library support is available for the following:
 
-* [Social-Federation](https://github.com/jaywink/social-federation) (Python)
+* [Federation](https://github.com/jaywink/federation) (Python)
 
 Have a server or library you have added support to? Send a PR!
 
@@ -38,5 +36,3 @@ Please open issues and pull requests if you want to suggest a change. If you ope
 NodeInfo2 is a fork of [NodeInfo](https://github.com/jhass/nodeinfo) which was seen as too complex for the problem it is solving. NodeInfo2 is interested in controlling *structure* of the document, not content. Additionally, discovery and strict versioning has been dropped for simpler implementation.
 
 NodeInfo emerged from it's predecessor `/statistics.json` that was added to the diaspora* software to be able to built a statistics collection and aggregation service, it was quickly supported by Friendica and RedMatrix. As more and more metadata was added and modifications occurred that would break backward compatibility, we felt the need to make this a more coordinated effort.
-
-
