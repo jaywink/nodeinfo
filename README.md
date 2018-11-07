@@ -15,7 +15,9 @@ Current version is 1.0. Version upgrade shall happen only in backwards incompati
 Implemented in the following platforms:
 
 * [The Federation.info](https://the-federation.info)
-* [Socialhome](https://github.com/jaywink/socialhome)
+* [Socialhome](https://socialhome.network)
+* [Prismo](https://gitlab.com/mbajur/prismo)
+* [Juick](https://juick.com/)
 
 Library support is available for the following:
 
