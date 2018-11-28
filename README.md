@@ -22,6 +22,7 @@ Implemented in the following platforms:
 Library support is available for the following:
 
 * [Federation](https://github.com/jaywink/federation) (Python)
+* [WordPress Plugin](https://wordpress.org/plugins/nodeinfo/) (PHP)
 
 Have a server or library you have added support to? Send a PR!
 
