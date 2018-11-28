@@ -54,6 +54,7 @@ Below are some example key values. Using these will ensure interoperability betw
 * `socialhome`
 * `social-relay`
 * `ganggo`
+* `wordpress`
 
 ### `protocols`
 
@@ -64,4 +65,5 @@ Below are some example key values. Using these will ensure interoperability betw
 * `mediagoblin`
 * `ostatus`
 * `pumpio`
+* `webmention`
 * `zot`
