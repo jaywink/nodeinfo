@@ -18,6 +18,7 @@ Implemented in the following platforms:
 * [Socialhome](https://socialhome.network)
 * [Prismo](https://gitlab.com/mbajur/prismo)
 * [Juick](https://juick.com/)
+* [Prosody](https://modules.prosody.im/mod_nodeinfo2.html) (optional module)
 
 Library support is available for the following:
 
